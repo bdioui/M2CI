@@ -17,7 +17,7 @@ from decouple import config
 
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ["167.71.235.158",]
+ALLOWED_HOSTS = ["167.71.235.158", "m2ci.yt", "www.m2ci.yt"]
 
 ROOT_URLCONF = f'{config("PROJECT_NAME")}.urls'
 
