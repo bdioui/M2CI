@@ -17739,11 +17739,14 @@ textarea.custom-input {
 
         <div class="container mt-5">
           <!-- Contacts form-->
-          <form class="form js-form-validate" action="php/mail.php" method="POST" data-aos="fade">
+
+
+          <form class="form" method="POST" data-aos="fade">
+            {% csrf_token %}
             <div class="form__group">
               <div class="form__item">
                 <label class="form__field field">
-                  <input type="text" name="full-name" placeholder="Nom">
+                  <input type="text" id="full_name" name="full_name" placeholder="Nom">
                   <span class="field__hint">Nom</span>
                   <span class="underline"></span>
                 </label>
@@ -17751,7 +17754,7 @@ textarea.custom-input {
               </div>
               <div class="form__item">
                 <label class="form__field field">
-                  <input type="email" name="email" placeholder="Addresse emai *" required>
+                  <input type="email" id="email" name="email" placeholder="Addresse email *" required>
                   <span class="field__hint">Adresse Email <span class="red">*</span>
                   </span>
                   <span class="underline"></span>
@@ -17760,7 +17763,7 @@ textarea.custom-input {
               </div>
               <div class="form__item">
                 <label class="form__field field">
-                  <input type="text" name="subject" placeholder="Sujet">
+                  <input type="text" id="sujet" name="sujet" placeholder="Sujet">
                   <span class="field__hint">Sujet</span>
                   <span class="underline"></span>
                 </label>
@@ -17768,7 +17771,7 @@ textarea.custom-input {
               </div>
             </div>
             <label class="form__field form__field--width-full field">
-              <textarea name="message" placeholder="Votre message ici"></textarea>
+              <textarea id="message" name="message" placeholder="Votre message ici"></textarea>
               <span class="field__hint">Votre message ici</span>
               <span class="underline"></span>
             </label>
@@ -17810,6 +17813,7 @@ textarea.custom-input {
       </div>
     </footer>
   </div>
+
   <!-- Popup thanks-->
   <section class="popup popup--thanks" id="thanks" style="display: none">
     <div class="popup__title">Merci !</div>

@@ -18168,20 +18168,21 @@ textarea.custom-input {
               </div>
               <div class="col-12 col-lg-6">
                 <!-- Feedback form-->
-                <form class="about__feedback feedback-form js-form-validate" action="php/mail.php" method="post">
+                <form class="about__feedback" method="post">
+                  {% csrf_token %}
                   <label class="feedback-form__field field field--bordered" aria-label="Votre nom">
-                    <input type="text" name="name" placeholder="Votre nom *">
+                    <input id="full_name" type="text" name="full_name" placeholder="Votre nom *">
                   </label>
                   <div class="field-error" style="display: none"></div>
                   <label class="feedback-form__field field field--bordered" aria-label="Adresse mail">
-                    <input type="email" name="email" placeholder="Adresse mail *">
+                    <input id="email" type="email" name="email" placeholder="Adresse mail *">
                   </label>
                   <div class="field-error" style="display: none"></div>
                   <label class="feedback-form__field field field--bordered" aria-label="Subject">
-                    <input type="text" name="subject" placeholder="Sujet (optionel)">
+                    <input type="text" id="sujet" name="sujet" placeholder="Sujet (optionel)">
                   </label>
                   <label class="feedback-form__field field field--bordered" aria-label="Votre message">
-                    <textarea name="message" placeholder="Votre message *"></textarea>
+                    <textarea id="message" name="message" placeholder="Votre message *"></textarea>
                   </label>
                   <div class="field-error" style="display: none"></div>
                   <button class="feedback-form__btn btn" type="submit">Envoyer</button>
