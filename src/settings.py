@@ -17,7 +17,7 @@ from decouple import config
 
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ["<ip_from_digital_ocean>",]
+ALLOWED_HOSTS = ["167.71.235.158",]
 
 ROOT_URLCONF = f'{config("PROJECT_NAME")}.urls'
 
@@ -127,7 +127,7 @@ EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'CodingWithMitch Team <noreply@codingwithmitch.com>'
 
 
-BASE_URL = "http://<ip_from_digital_ocean>"
+BASE_URL = "http://167.71.235.158"
 
 
 
