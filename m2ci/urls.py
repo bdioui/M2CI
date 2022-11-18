@@ -12,3 +12,4 @@ urlpatterns = [
     path('test/Team/', views.Team, name='Team'),
     path('test/Contact/', views.Contact, name='Contact'),
 ]
+
